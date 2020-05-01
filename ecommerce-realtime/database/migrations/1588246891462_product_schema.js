@@ -15,7 +15,7 @@ class ProductSchema extends Schema {
 
       table
       .foreign('image_id')
-      .refereces('id')
+      .references('id')
       .inTable('images')
       .onDelete('cascade')
     })
@@ -25,8 +25,8 @@ class ProductSchema extends Schema {
       table.integer('image_id').unsigned()
       table.integer('product_id').unsigned()
 
-      table.foreign('image_id').refereces('id').inTable('images').onDelete('cascade')
-      table.foreign('product_id').refereces('id').inTable('products').onDelete('cascade')
+      table.foreign('image_id').references('id').inTable('images').onDelete('cascade')
+      table.foreign('product_id').references('id').inTable('products').onDelete('cascade')
     })
 
     this.create('category_product', (table) => {
@@ -34,8 +34,8 @@ class ProductSchema extends Schema {
       table.integer('category_id').unsigned()
       table.integer('product_id').unsigned()
 
-      table.foreign('category_id').refereces('id').inTable('categories').onDelete('cascade')
-      table.foreign('product_id').refereces('id').inTable('products').onDelete('cascade')
+      table.foreign('category_id').references('id').inTable('categories').onDelete('cascade')
+      table.foreign('product_id').references('id').inTable('products').onDelete('cascade')
     })
   }
 
