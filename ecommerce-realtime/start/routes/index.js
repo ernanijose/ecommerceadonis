@@ -17,5 +17,10 @@
 const Route = use('Route')
 
 Route.get('/', () => {
-  return { greeting: 'Hello world in JSON' }
+  return { greeting: 'Hello world in JSONeeeee' }
 })
+
+/**
+ * Importa as rotas de authenticação
+ */
+require('./auth')
